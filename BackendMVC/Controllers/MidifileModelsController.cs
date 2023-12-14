@@ -10,6 +10,7 @@ using BackendMVC.Models;
 
 namespace BackendMVC.Controllers
 {
+
     public class MidifileModelsController : Controller
     {
         private readonly BackendMVCContext _context;
@@ -19,6 +20,8 @@ namespace BackendMVC.Controllers
             _context = context;
         }
 
+
+        //---------------------------------------------views
         // GET: MidifileModels
         public async Task<IActionResult> Index()
         {
@@ -117,6 +120,7 @@ namespace BackendMVC.Controllers
         }
 
         // GET: MidifileModels/Delete/5
+
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
