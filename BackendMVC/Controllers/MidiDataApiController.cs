@@ -16,8 +16,33 @@ namespace BackendMVC.Controllers
         }
         //some comment
         //some other comment to test git
+
         /// <summary>
-        /// get mididata by id
+        /// ----get all mididata in list----
+        /// </summary>
+        [HttpGet("getpage")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<List<MidifileModel>> GetById_ActionResultOfT()
+        {
+            var Midifile = _context.MidifileModel.ToList();
+            return Midifile;// == null ? NotFound() : Midifile;
+        }
+
+        /// <summary>
+        /// ----get all mididata in list----
+        /// </summary>
+        [HttpGet("getall")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<List<MidifileModel>> GetPage_ActionResultOfT(int pagenum, int itemsPerPage)
+        {
+            var Midifile = _context.MidifileModel.ToList();
+            return Midifile;// == null ? NotFound() : Midifile;
+        }
+
+        /// <summary>
+        /// ----get mididata table by id----
         /// </summary>
         [HttpGet("findbyid{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -29,7 +54,7 @@ namespace BackendMVC.Controllers
         }
 
         /// <summary>
-        /// ----Deletes mididata by id.----
+        /// ----Deletes mididata table by id----
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
