@@ -28,6 +28,8 @@ interface MidiTrack
 export class AppComponent implements OnInit {
   public forecasts: WeatherForecast[] = [];
   public midifiles: MidiTrack[] = [];
+  private rootPath: string = "https://localhost:7296/";
+  public testMidiPath: string = "https://localhost:7296/MidiData/2018/MIDI-Unprocessed_Chamber3_MID--AUDIO_10_R3_2018_wav--1.midi";
 
   constructor(private http: HttpClient) {}
 
@@ -36,7 +38,7 @@ export class AppComponent implements OnInit {
     this.getMidiData();
   }
   getMidiData(){
-    this.http.get<MidiTrack[]>('https://localhost:7296/api/MidiDataApi/getpage').subscribe(
+    this.http.get<MidiTrack[]>(this.rootPath + 'api/MidiDataApi/getpage').subscribe(
       (result) => {
         this.midifiles = result;
       },
@@ -44,6 +46,10 @@ export class AppComponent implements OnInit {
         console.error(error);
       }
     );
+  }
+
+  play(MidiTrack: MidiTrack){
+    console.log(this.rootPath + "MidiData/maestro/" + MidiTrack.filePath);
   }
 
   getForecasts() {
