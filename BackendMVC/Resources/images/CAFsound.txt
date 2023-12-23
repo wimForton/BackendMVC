@@ -1,0 +1,17 @@
+patches
+pads:
+goodbyesMF
+bigsaws GD
+water angels
+wetplate
+spaceflight
+nextfrontier!
+dxpad
+astralfloat
+pwmclassic
+
+melody:
+mixologist
+
+file under x
+alle perc

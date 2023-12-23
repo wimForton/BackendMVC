@@ -27,6 +27,7 @@
 	  <Content Include="MidiData\\**\**\*.*">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Content>
+	  <Folder Include="Resources\images\" />
   </ItemGroup>
 
 </Project>

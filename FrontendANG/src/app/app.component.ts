@@ -26,7 +26,7 @@ interface MidiTrack
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  public forecasts: WeatherForecast[] = [];
+
   public midifiles: MidiTrack[] = [];
   private rootPath: string = "https://localhost:7296/";
   public testMidiPath: string = "https://localhost:7296/MidiData/2018/MIDI-Unprocessed_Chamber3_MID--AUDIO_10_R3_2018_wav--1.midi";
@@ -48,19 +48,12 @@ export class AppComponent implements OnInit {
     );
   }
 
-  play(MidiTrack: MidiTrack){
-    console.log(this.rootPath + "MidiData/maestro/" + MidiTrack.filePath);
+  getMidiFile(){
+    
   }
 
-  getForecasts() {
-    this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
-      (result) => {
-        this.forecasts = result;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+  play(MidiTrack: MidiTrack){
+    console.log(this.rootPath + "MidiData/maestro/" + MidiTrack.filePath);
   }
 
   title = 'FrontendANG';
