@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UploadComponent } from './upload/upload.component';
-import { DownloadComponent } from './download/download.component';
+import { UploadComponent } from './api/upload/upload.component';
+import { DownloadComponent } from './api/download/download.component';
 
 @NgModule({
   declarations: [

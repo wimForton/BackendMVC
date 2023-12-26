@@ -4,7 +4,7 @@ import { HttpClient, HttpEventType, HttpErrorResponse } from '@angular/common/ht
 @Injectable({
   providedIn: 'root'
 })
-export class FiletransferService {
+export class FileTransferService {
   private url: string = 'https://localhost:7296/api/DownloadUpload';
   constructor(private http: HttpClient) { }
 

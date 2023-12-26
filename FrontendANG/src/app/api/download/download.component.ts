@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FiletransferService } from './../_services/filetransfer.service';
+import { FileTransferService } from '../_services/filetransfer.service';
 
 @Component({
     selector: 'app-download',
@@ -10,11 +10,11 @@ export class DownloadComponent implements OnInit {
   message: string = "";
   progress: number = 0;
   
-  constructor(private filetransferService: FiletransferService) {}
+  constructor(private transferService: FileTransferService) {}
   
     ngOnInit(): void {}
     download = () => {
-        this.filetransferService.download()
+        this.transferService.download()
         .subscribe((response) => {
             this.message = "todo";//response['message'];
         });

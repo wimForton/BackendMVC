@@ -1,6 +1,6 @@
 import { HttpClient, HttpEventType, HttpErrorResponse } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FiletransferService } from '../_services/filetransfer.service';
+import { FileTransferService } from '../_services/filetransfer.service';
 
 @Component({
   selector: 'app-upload',
@@ -12,7 +12,7 @@ export class UploadComponent implements OnInit {
   message?: string;
   @Output() public onUploadFinished = new EventEmitter();
   
-  constructor(private fileService: FiletransferService) { }
+  constructor(private transferService: FileTransferService) { }
   ngOnInit() {
   }
   uploadFile = (files: FileList | null) => {
@@ -23,7 +23,7 @@ export class UploadComponent implements OnInit {
     const formData = new FormData();
     formData.append('file', fileToUpload, fileToUpload.name);
     
-    this.fileService.upload(formData)
+    this.transferService.upload(formData)
       .subscribe({
         next: (event) => {
         if (event.type === HttpEventType.UploadProgress){
