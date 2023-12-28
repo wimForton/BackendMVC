@@ -9,6 +9,7 @@ import { UploadComponent } from './api/upload/upload.component';
 import { DownloadComponent } from './api/download/download.component';
 import { MidiplayComponent } from './bll/audio/midiplay/midiplay/midiplay.component';
 import { MidiListComponent } from './gui/midi-list/midi-list.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MidiListComponent } from './gui/midi-list/midi-list.component';
   ],
   imports: [
     BrowserModule, HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

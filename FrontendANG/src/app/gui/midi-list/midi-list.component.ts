@@ -10,6 +10,9 @@ import { GetMidiListService } from 'src/app/api/_services/get-midi-list.service'
 export class MidiListComponent implements OnInit {
   public midifiles: MidiTrack[] = [];
   private rootPath: string = "https://localhost:7296/";
+  public currentpage = 1;
+  public totalmidifiles = 1300;
+  public itemsperpage = 60;
 
   constructor(private getMidiListService: GetMidiListService) {}
 
@@ -18,7 +21,7 @@ export class MidiListComponent implements OnInit {
     this.getMidiList();
   }
   getMidiList(){
-    this.getMidiListService.getlistpage(26,50)
+    this.getMidiListService.getlistpage(this.currentpage,this.itemsperpage)
     .subscribe(
       (response: MidiTrack[]) =>{
           if (response) {
