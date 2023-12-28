@@ -1,15 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FileTransferService } from '../_services/filetransfer.service';
-///import {MidiParser} from 'midi-parser-js';
-//const midiParser = require('midi-parser-js');
-//const midiParser  = require('midi-parser-js');
-//const fs = require('fs');
-//import * as midiManager from 'midi-file';
-//import {MidiParser} from 'midi-parser-js';
-//import * as fs from 'fs';
-//import * as promises from 'node:fs/promises';
 import { Midi } from '@tonejs/midi';
-//import { Tone } from 'tone/build/esm/core/Tone';
 import * as Tone from "Tone";
 import {inputById, MIDI_INPUT, MIDI_OUTPUT, outputByName, MIDI_SUPPORT} from '@ng-web-apis/midi';
 
@@ -67,6 +58,7 @@ export class DownloadComponent implements OnInit {
                     release: 0.1,
                 },
             }).toDestination();
+            synth.volume.value = 0.3;
             synths.push(synth);
             //schedule all of the events
             track.notes.forEach((note) => {

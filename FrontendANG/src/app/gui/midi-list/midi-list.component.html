@@ -1,0 +1,22 @@
+
+
+<p *ngIf="!midifiles">Loading...</p>
+<table *ngIf="midifiles">
+    <thead>
+        <tr>
+            <th>filePath</th>
+            <th>fileNumber</th>
+            <th>composer</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let midifile of midifiles">
+            <td>{{ midifile.filePath }}</td>
+            <td>{{ midifile.fileNumber }}</td>
+            <td>{{ midifile.composer }}</td>
+            <td><button type="button" title="play midi"
+            (click)="play(midifile)">show data</button></td>
+        </tr>
+    </tbody>
+</table>

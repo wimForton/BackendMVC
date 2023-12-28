@@ -23,10 +23,12 @@ namespace BackendMVC.Controllers
         [HttpGet("getpage")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<List<MidifileModel>> GetById_ActionResultOfT()
+        public ActionResult<List<MidifileModel>> GetById_ActionResultOfT(int pagenum, int itemsPerPage)
         {
-            var Midifile = _context.MidifileModel.ToList();
-            return Midifile;// == null ? NotFound() : Midifile;
+            var MidifileResults = new List<MidifileModel>();
+            var Midifilelist = _context.MidifileModel.ToList();
+            MidifileResults = Midifilelist.Skip((pagenum - 1) * itemsPerPage).Take(itemsPerPage).ToList();
+            return MidifileResults;// == null ? NotFound() : Midifile;
         }
 
         /// <summary>
@@ -35,7 +37,7 @@ namespace BackendMVC.Controllers
         [HttpGet("getall")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<List<MidifileModel>> GetPage_ActionResultOfT(int pagenum, int itemsPerPage)
+        public ActionResult<List<MidifileModel>> GetPage_ActionResultOfT()
         {
             var Midifile = _context.MidifileModel.ToList();
             return Midifile;// == null ? NotFound() : Midifile;

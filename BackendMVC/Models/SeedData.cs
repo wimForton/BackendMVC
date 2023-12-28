@@ -33,7 +33,7 @@ public static class SeedData
             else
             {
                 Console.WriteLine("fill midi database, was empty");
-                for (global::System.Int32 i = 0; i < 20; i++)//midiDataObject.canonicalComposer.Count
+                for (global::System.Int32 i = 0; i < midiDataObject.canonicalComposer.Count; i++)//midiDataObject.canonicalComposer.Count
                 {
                     
                     MidifileModel midiObj = new MidifileModel();
