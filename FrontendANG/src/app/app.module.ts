@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UploadComponent } from './api/upload/upload.component';
 import { DownloadComponent } from './api/download/download.component';
+import { MidiplayComponent } from './bll/audio/midiplay/midiplay/midiplay.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UploadComponent,
-    DownloadComponent
+    DownloadComponent,
+    MidiplayComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
