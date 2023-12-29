@@ -4,9 +4,10 @@ import { Midi } from '@tonejs/midi';
 
 
 @Component({
-  selector: 'app-midiplay',
-  templateUrl: './midiplay.component.html',
-  styleUrl: './midiplay.component.css'
+    selector: 'app-midiplay',
+    templateUrl: './midiplay.component.html',
+    styleUrl: './midiplay.component.css',
+    standalone: true
 })
 export class MidiplayComponent {
 

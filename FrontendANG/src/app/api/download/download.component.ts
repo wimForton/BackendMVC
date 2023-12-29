@@ -3,12 +3,15 @@ import { FileTransferService } from '../_services/filetransfer.service';
 import { Midi } from '@tonejs/midi';
 import * as Tone from "Tone";
 import {inputById, MIDI_INPUT, MIDI_OUTPUT, outputByName, MIDI_SUPPORT} from '@ng-web-apis/midi';
+import { NgIf } from '@angular/common';
 
 
 @Component({
     selector: 'app-download',
     templateUrl: './download.component.html',
     styleUrls: ['./download.component.css'],
+    standalone: true,
+    imports: [NgIf],
 })
 export class DownloadComponent implements OnInit {
   message: string = "";

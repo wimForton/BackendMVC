@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MidiListComponent } from './gui/midi-list/midi-list.component';
 
 interface WeatherForecast {
   date: string;
@@ -21,9 +22,11 @@ interface MidiTrack
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    standalone: true,
+    imports: [MidiListComponent]
 })
 export class AppComponent implements OnInit {
 

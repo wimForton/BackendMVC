@@ -1,11 +1,14 @@
 import { HttpClient, HttpEventType, HttpErrorResponse } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FileTransferService } from '../_services/filetransfer.service';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-upload',
-  templateUrl: './upload.component.html',
-  styleUrl: './upload.component.css'
+    selector: 'app-upload',
+    templateUrl: './upload.component.html',
+    styleUrl: './upload.component.css',
+    standalone: true,
+    imports: [NgIf]
 })
 export class UploadComponent implements OnInit {
   progress: number = 0;
