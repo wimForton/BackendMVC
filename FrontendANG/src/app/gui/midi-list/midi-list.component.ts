@@ -11,7 +11,7 @@ export class MidiListComponent implements OnInit {
   public midifiles: MidiTrack[] = [];
   private rootPath: string = "https://localhost:7296/";
   public currentpage = 1;
-  public totalmidifiles = 1300;
+  public totalmidifiles = 1270;
   public itemsperpage = 60;
 
   constructor(private getMidiListService: GetMidiListService) {}

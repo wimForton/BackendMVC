@@ -1,6 +1,6 @@
 
 <div class="paginator">
-    <ngb-pagination class="pagination" [collectionSize]="totalmidifiles" [pageSize]="40" [(page)]="currentpage" aria-label="Default pagination" (pageChange)="getMidiList()"></ngb-pagination>
+    <ngb-pagination class="pagination" [collectionSize]="totalmidifiles" [pageSize]="itemsperpage" [(page)]="currentpage" aria-label="Default pagination" (pageChange)="getMidiList()"></ngb-pagination>
 </div>
 <p *ngIf="!midifiles">Loading...</p>
 <table *ngIf="midifiles">
