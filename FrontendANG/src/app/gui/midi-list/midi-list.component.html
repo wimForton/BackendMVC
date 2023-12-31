@@ -1,4 +1,4 @@
-
+<h1 class="title">Midi files</h1>
 <div class="paginator">
     <ngb-pagination class="pagination" [collectionSize]="totalmidifiles" [pageSize]="itemsperpage" [(page)]="currentpage" aria-label="Default pagination" (pageChange)="getMidiList()"></ngb-pagination>
 </div>
@@ -7,7 +7,7 @@
     <thead>
         <tr>
             <th>filePath</th>
-            <th>fileNumber</th>
+            <th>song number</th>
             <th>composer</th>
             <th></th>
         </tr>
@@ -17,8 +17,7 @@
             <td>{{ midifile.filePath }}</td>
             <td>{{ midifile.fileNumber }}</td>
             <td>{{ midifile.composer }}</td>
-            <td><button type="button" title="play midi"
-            (click)="play(midifile)">show data</button></td>
+            <td><button class="mybutton" [routerLink]="['mididetails',midifile.id]">details</button></td>
         </tr>
     </tbody>
 </table>

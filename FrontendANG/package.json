@@ -32,6 +32,7 @@
     "midi-file": "^1.2.4",
     "midi-parser-js": "^4.0.4",
     "midiconvert": "^0.4.7",
+    "pixi.js": "^7.3.2",
     "run-script-os": "*",
     "rxjs": "~7.8.0",
     "tone": "^14.7.77",

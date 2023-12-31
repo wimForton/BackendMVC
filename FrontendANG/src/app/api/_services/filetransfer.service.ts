@@ -17,11 +17,12 @@ export class FileTransferService {
     });
   }
 
-  public download() {
+  public download(filePath: string) {
     var testUrl: string = "https://localhost:7296/api/DownloadUpload/download?fileUrl=Resources\\images\\screengrab_A.jpg";//test works
     var testUrl2: string = this.url + "/download?fileUrl=Resources\\images\\" + "Stronger.mid";
-    console.log("testUrl", testUrl2);
-    return this.http.get(testUrl2, {responseType: 'arraybuffer'});
+    var testUrl3: string = this.url + "/download?fileUrl=MidiData\\maestro\\" + filePath;
+    console.log("testUrl", testUrl3);
+    return this.http.get(testUrl3, {responseType: 'arraybuffer'});
   }
   public downloadArrayBufferUrl(url: string) {
     console.log("downloadbyurl", url);

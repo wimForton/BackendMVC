@@ -27,7 +27,7 @@ export class DownloadComponent implements OnInit {
     }
     download = () => {
         let filename: string = "filename";
-        this.transferService.download()
+        this.transferService.download(filename)
         .subscribe(
             (response: ArrayBuffer) =>{
                 if (response) {

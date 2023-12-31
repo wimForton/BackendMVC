@@ -3,13 +3,14 @@ import { MidiTrack } from 'src/app/api/_models/midiTrack';
 import { GetMidiListService } from 'src/app/api/_services/get-midi-list.service';
 import { NgIf, NgFor } from '@angular/common';
 import { NgbPagination } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-midi-list',
     templateUrl: './midi-list.component.html',
     styleUrl: './midi-list.component.css',
     standalone: true,
-    imports: [NgbPagination, NgIf, NgFor]
+    imports: [NgbPagination, NgIf, NgFor, RouterModule]
 })
 export class MidiListComponent implements OnInit {
   public midifiles: MidiTrack[] = [];

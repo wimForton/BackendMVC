@@ -1,2 +1,10 @@
-<p>mididetail works!</p>
-<div *ngIf="Id"><p>{{Id}}/p></div>
+<h1 class="title">Midi details</h1>
+<div *ngIf="miditrack">
+
+    <p>Filenumber {{miditrack.fileNumber}}</p>
+    <p>Composer: {{miditrack.composer}}</p>
+
+    <!-- <div *ngIf="Id"><p>{{Id}}</p></div> -->
+    
+    <div *ngIf="midistream"><app-pixiapp [midistream]="midistream"></app-pixiapp></div>
+</div>
