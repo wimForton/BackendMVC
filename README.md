@@ -13,3 +13,5 @@ Todo:
 Create the page to add your own compositions to the database.
 Add support for images that show the composer's picture.
 Add restrictions with identity framework to make sure not every random person can add data.
+
+![afbeelding](https://github.com/wimForton/BackendMVC/assets/82388497/3150a405-44da-4ad2-aaf6-5ff91ad704ab)
