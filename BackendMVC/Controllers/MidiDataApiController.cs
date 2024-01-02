@@ -55,6 +55,20 @@ namespace BackendMVC.Controllers
             return Midifile == null ? NotFound() : Midifile;
         }
 
+        //// upload metadata
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Create([Bind("FileNumber,Title,Year,FilePath,Composer")] MidifileModel midiMetaData)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        _context.Add(midiMetaData);
+        //        await _context.SaveChangesAsync();
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View(midiMetaData);
+        //}
+
         /// <summary>
         /// ----Deletes mididata table by id----
         /// </summary>
