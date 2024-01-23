@@ -15,36 +15,8 @@ import { PixiappComponent } from './gui/pixijs/pixiapp/pixiapp.component';
     standalone: true,
     imports: [MidiListComponent, UploadComponent, DownloadComponent, RouterModule, PixiappComponent]
 })
-export class AppComponent{// implements OnInit 
+export class AppComponent{
 
- /*  public midifiles: MidiTrack[] = [];
-  private rootPath: string = "https://localhost:7296/";
-  public testMidiPath: string = "https://localhost:7296/MidiData/2018/MIDI-Unprocessed_Chamber3_MID--AUDIO_10_R3_2018_wav--1.midi";
-
-  constructor(private http: HttpClient) {}
-
-  ngOnInit() {
-    //this.getForecasts();
-    this.getMidiData();
-  }
-  getMidiData(){
-    this.http.get<MidiTrack[]>(this.rootPath + 'api/MidiDataApi/getpage').subscribe(
-      (result) => {
-        this.midifiles = result;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }
-
-  getMidiFile(){
-    
-  }
-
-  play(MidiTrack: MidiTrack){
-    console.log(this.rootPath + "MidiData/maestro/" + MidiTrack.filePath);
-  } */
 
   title = 'FrontendANG';
 }

@@ -42,3 +42,15 @@ table {
     padding-left: 10px;
     padding-right: 10px;
 }
+.topbuttons{
+    background: rgb(27, 54, 78);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: rgb(207, 210, 245);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}

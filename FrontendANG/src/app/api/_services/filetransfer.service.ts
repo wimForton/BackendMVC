@@ -6,7 +6,7 @@ import { HttpClient, HttpEventType, HttpErrorResponse } from '@angular/common/ht
   providedIn: 'root'
 })
 export class FileTransferService {
-  private url: string = 'https://localhost:7296/api/DownloadUpload';
+  private url: string = 'https://localhost:44356/api/DownloadUpload';
   constructor(private http: HttpClient) { }
 
   public upload(formData: FormData) {
@@ -18,8 +18,6 @@ export class FileTransferService {
   }
 
   public download(filePath: string) {
-    var testUrl: string = "https://localhost:7296/api/DownloadUpload/download?fileUrl=Resources\\images\\screengrab_A.jpg";//test works
-    var testUrl2: string = this.url + "/download?fileUrl=Resources\\images\\" + "Stronger.mid";
     var testUrl3: string = this.url + "/download?fileUrl=MidiData\\maestro\\" + filePath;
     console.log("testUrl", testUrl3);
     return this.http.get(testUrl3, {responseType: 'arraybuffer'});

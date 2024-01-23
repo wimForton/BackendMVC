@@ -7,7 +7,7 @@ import { MidiTrack } from '../_models/midiTrack';
 })
 export class GetmididetailsService {
 
-  private rootPath: string = 'https://localhost:7296/';
+  private rootPath: string = 'https://localhost:44356/';
 
   constructor(private http: HttpClient) { }
   public getmididetails(id: number) {

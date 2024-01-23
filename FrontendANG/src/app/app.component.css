@@ -32,3 +32,22 @@ table {
     background-color: rgb(19, 30, 49);
     padding: 15px;
 }
+.mybutton{
+    color: rgb(255, 255, 255);
+    background-color: rgb(23, 46, 68);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.topbuttons{
+    background: #8189ce;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: rgb(207, 210, 245);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

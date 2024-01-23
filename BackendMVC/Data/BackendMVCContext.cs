@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using BackendMVC.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace BackendMVC.Data
 {
-    public class BackendMVCContext : IdentityDbContext
+    public class BackendMVCContext : IdentityDbContext<IdentityUser>
     {
         public BackendMVCContext (DbContextOptions<BackendMVCContext> options)
             : base(options)

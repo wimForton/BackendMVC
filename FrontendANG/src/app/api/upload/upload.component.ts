@@ -2,17 +2,21 @@ import { HttpClient, HttpEventType, HttpErrorResponse } from '@angular/common/ht
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FileTransferService } from '../_services/filetransfer.service';
 import { NgIf } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-upload',
     templateUrl: './upload.component.html',
     styleUrl: './upload.component.css',
     standalone: true,
-    imports: [NgIf]
+    imports: [NgIf, FormsModule]
 })
 export class UploadComponent implements OnInit {
   progress: number = 0;
   message?: string;
+  composer: string = "";
+  year: number = 2024;
+  title: string = "";
   @Output() public onUploadFinished = new EventEmitter();
   
   constructor(private transferService: FileTransferService) { }

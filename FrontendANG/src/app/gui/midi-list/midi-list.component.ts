@@ -23,6 +23,7 @@ export class MidiListComponent implements OnInit {
 
   ngOnInit() {
     //this.getForecasts();
+    this.currentpage = this.getMidiListService.currentpage;
     this.getMidiList();
   }
   getMidiList(){
